@@ -1,6 +1,6 @@
 import React from 'react'
 import { RightAlert, FalseAlert } from '~/components/alert'
-import { Card, CardHeader, CardBody } from '~/components/card'
+import { Card, CardHeader, CardBody, CardFooter } from '~/components/card'
 import { Button } from '~/components/button'
 import { Input } from '~/components/input'
 
@@ -62,6 +62,12 @@ export default function Pengurangan() {
         }} />
 
       </CardBody>
+      <CardFooter>
+        <a href="/" className="block my-4 text-gray-600 text-center w-full text-sm  underline">
+          Kembali ke halaman utama
+        </a>
+      </CardFooter>
+
     </Card>
   )
 }

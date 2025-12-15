@@ -1,6 +1,6 @@
 import React from 'react'
 import { RightAlert, FalseAlert } from '~/components/alert'
-import { Card, CardHeader, CardBody } from '~/components/card'
+import { Card, CardHeader, CardBody, CardFooter } from '~/components/card'
 import { Button } from '~/components/button'
 import { Input } from '~/components/input'
 
@@ -14,8 +14,8 @@ export default function Perkalian() {
 
   // generate two random numbers on component mount
   React.useEffect(() => {
-    const num1 = Math.floor(Math.random() * 100) || Math.floor(Math.random() * -100)
-    const num2 = Math.floor(Math.random() * 100) || Math.floor(Math.random() * -100)
+    const num1 = Math.floor(Math.random() * 10) || Math.floor(Math.random() * -10)
+    const num2 = Math.floor(Math.random() * 10) || Math.floor(Math.random() * -10)
     setFirstNumber(num1)
     setSecondNumber(num2)
     setUserAnswer(undefined)
@@ -54,14 +54,19 @@ export default function Perkalian() {
         )}
 
         <Button name='Soal Baru' onClick={() => {
-          const num1 = Math.floor(Math.random() * 100) || Math.floor(Math.random() * -100)
-          const num2 = Math.floor(Math.random() * 100) || Math.floor(Math.random() * -100)
+          const num1 = Math.floor(Math.random() * 10) || Math.floor(Math.random() * -10)
+          const num2 = Math.floor(Math.random() * 10) || Math.floor(Math.random() * -10)
           setFirstNumber(num1)
           setSecondNumber(num2)
           setUserAnswer(undefined)
         }} />
 
       </CardBody>
+      <CardFooter>
+        <a href="/" className="block my-4 text-gray-600 text-center w-full text-sm  underline">
+          Kembali ke halaman utama
+        </a>
+      </CardFooter>
     </Card>
   )
 }
